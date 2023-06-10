@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+body {
+  background-color: #646d7e;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.cards-section {
+  flex-basis: 20%;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  margin: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.input-group input,
+.input-group select {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.recommended-house {
+  margin-top: 10px;
+}
+
+.layout-section {
+  flex-basis: 50%;
+  background-color: #363636;
+  border-radius: 10px;
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row {
+  display: flex;
+}
+
+.plot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  margin: 2px;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #fff;
+  color: #000;
+  position: relative;
+}
+
+.plot.House {
+  background-color: lightblue;
+}
+
+.plot.Restaurant {
+  background-color: lightgreen;
+}
+
+.plot.Gym {
+  background-color: lightyellow;
+}
+
+.plot.Hospital {
+  background-color: lightpink;
+}
+
+.plot i {
+  margin-right: 5px;
+}
+
+
+.plot.House:hover .tooltip {
+  display: block;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  top: -10px;
+  left: -75px;
+}
+
+.owner {
+  display: none;
+  font-size: 12px;
+  margin-top: 5px;
+  color: #777;
+  text-align: center;
+}
+
+.plot.House:hover .owner {
+  display: block;
 }
